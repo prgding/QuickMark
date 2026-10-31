@@ -1,0 +1,16 @@
+{
+  "captureMs" : 162.1009583468549,
+  "displayCount" : 2,
+  "measures" : "Request to overlay submission, not physical input-to-photon latency; no screenshot saved",
+  "pixels" : [
+    [
+      4608,
+      2592
+    ],
+    [
+      3360,
+      2100
+    ]
+  ],
+  "readyMs" : 272.47116662329063
+}

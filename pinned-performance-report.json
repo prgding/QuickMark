@@ -1,0 +1,32 @@
+{
+  "displays" : [
+    {
+      "callbackHz" : 59.474787948307771,
+      "callbackP95ms" : 20.682333328295499,
+      "callbackP99ms" : 25.441333302296698,
+      "display" : "U2790B",
+      "intervalsOver1_5xTarget" : 7,
+      "requestedHz" : 60,
+      "samples" : 444,
+      "targetIntervalMs" : 16.666666662786156,
+      "textureUploads" : 1,
+      "updateCPUP95ms" : 0.55183330550789833,
+      "windowPositionUpdates" : 474
+    },
+    {
+      "callbackHz" : 59.461438780556989,
+      "callbackP95ms" : 21.124541643075645,
+      "callbackP99ms" : 26.106083358172327,
+      "display" : "内建视网膜显示器",
+      "intervalsOver1_5xTarget" : 9,
+      "requestedHz" : 60,
+      "samples" : 443,
+      "targetIntervalMs" : 16.666000010445714,
+      "textureUploads" : 1,
+      "updateCPUP95ms" : 0.79104164615273476,
+      "windowPositionUpdates" : 473
+    }
+  ],
+  "measures" : "Display-link cadence, window position update calls and CPU time, NOT physical presentation or end-to-end mouse latency",
+  "test" : "Pinned screenshot production window movement; synthetic pointer; 8 seconds; 0.5s warmup"
+}

@@ -1,0 +1,25 @@
+# macOS metadata
+.DS_Store
+._*
+
+# Generated application bundles and build output
+*.app/
+.build/
+build/
+DerivedData/
+*.dSYM/
+*.swiftmodule
+*.swiftdoc
+*.swiftsourceinfo
+
+# Generated previews and local diagnostics
+selection-shadow-preview.png
+*-diagnostics.json
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key

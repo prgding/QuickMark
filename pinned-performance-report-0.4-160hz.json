@@ -1,0 +1,32 @@
+{
+  "displays" : [
+    {
+      "callbackHz" : 159.99936714332901,
+      "callbackP95ms" : 8.4127083246130496,
+      "callbackP99ms" : 9.0175833320245147,
+      "display" : "P27H2V",
+      "intervalsOver1_5xTarget" : 7,
+      "requestedHz" : 160,
+      "samples" : 1196,
+      "targetIntervalMs" : 6.2500000058207661,
+      "textureUploads" : 1,
+      "updateCPUP95ms" : 1.0274999949615449,
+      "windowPositionUpdates" : 1265
+    },
+    {
+      "callbackHz" : 59.999582888739262,
+      "callbackP95ms" : 18.801958329277113,
+      "callbackP99ms" : 21.054416662082076,
+      "display" : "内建视网膜显示器",
+      "intervalsOver1_5xTarget" : 0,
+      "requestedHz" : 60,
+      "samples" : 448,
+      "targetIntervalMs" : 16.666000010445714,
+      "textureUploads" : 1,
+      "updateCPUP95ms" : 2.1380416583269835,
+      "windowPositionUpdates" : 475
+    }
+  ],
+  "measures" : "Display-link cadence, window position update calls and CPU time, NOT physical presentation or end-to-end mouse latency",
+  "test" : "Pinned screenshot production window movement; synthetic pointer; 8 seconds; 0.5s warmup"
+}
