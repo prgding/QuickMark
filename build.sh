@@ -2,6 +2,7 @@
 set -euo pipefail
 ROOT="${0:A:h}"
 APP="$ROOT/QuickMark.app"
+SIGNING_IDENTITY="$(python3 "$ROOT/signing.py" identity)"
 BUILD_CACHE="${TMPDIR:-/tmp}/quickmark-swift-cache"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources" "$BUILD_CACHE"
 xcrun swiftc -O -swift-version 5 -target arm64-apple-macosx14.0 \
@@ -15,5 +16,5 @@ xcrun swift -module-cache-path "$BUILD_CACHE" "$ROOT/Source/MakeIcon.swift" "$BU
 iconutil -c icns "$BUILD_CACHE/QuickMark.iconset" -o "$APP/Contents/Resources/QuickMark.icns"
 RELEASED_AT="$(/bin/date -u '+%Y-%m-%dT%H:%M:%SZ')"
 /usr/bin/plutil -insert QuickMarkReleaseDate -date "$RELEASED_AT" "$APP/Contents/Info.plist"
-codesign --force --sign - --identifier local.dingshuai.QuickMark "$APP"
+python3 "$ROOT/signing.py" sign "$APP" "$SIGNING_IDENTITY"
 print "Built: $APP"

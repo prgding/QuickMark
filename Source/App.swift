@@ -36,7 +36,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject, NSMe
         configureMainMenu()
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         statusItem.button?.image = NSImage(systemSymbolName: "crop", accessibilityDescription: "QuickMark 截图")
-        statusItem.button?.toolTip = "QuickMark · ⌘⇧4 截图"
+        statusItem.button?.toolTip = nil
+        statusItem.button?.setAccessibilityLabel("QuickMark · ⌘⇧4 截图")
         let menu = NSMenu()
         menu.delegate = self
         let capture = NSMenuItem(title: "截取区域", action: #selector(captureAction), keyEquivalent: "4")
